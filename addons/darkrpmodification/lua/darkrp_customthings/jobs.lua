@@ -1564,6 +1564,41 @@ TEAM_PETTYOFFICER = DarkRP.createJob("Navy Petty Officer", {
 	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
 })
 
+TEAM_NAVYCHIEF = DarkRP.createJob("Navy Chief", {
+    color = Color(102, 0, 204, 255),
+    model = {
+	"models/player/male/navy.mdl",
+	"models/player/female/navy.mdl"
+	},
+    description = [[You are a member of the Imperial Navy. You control the systems of the ISD Undead and fight enemy vessels that seek to defy the Imperial might.]],
+    weapons = {"rw_sw_rk3", "weapon_fists", "none"},
+    command = "navychief",
+    max = 0,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+	category = "Imperial Navy",
+	sortOrder = 101,
+	skins = {0},
+	bodygroups = {
+        ["Ranks Body"] = {2},
+        ["Ranks Armor"] = {0,2},
+        ["Code Cylinder"] = {3},
+        ["Hat"] = {0,1,2},
+        ["Belt"] = {0,1},
+        ["Body"] = {0,1},
+        ["Head"] = {0,1,2,3},
+        ["Right cyllinder 1"] = {0},
+        ["Right cyllinder 2"] = {0},
+        ["Left cyllinder 1"] = {0},
+        ["Left cyllinder 2"] = {0},
+    },
+	PlayerSpawn = function(ply)	ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(100) return CLIENT end,
+	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
+})
+
 TEAM_NAVYMIDSHIPMAN = DarkRP.createJob("Navy Midshipman", {
     color = Color(102, 0, 204, 255),
     model = {
@@ -1580,7 +1615,7 @@ TEAM_NAVYMIDSHIPMAN = DarkRP.createJob("Navy Midshipman", {
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 101,
+	sortOrder = 102,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {2},
@@ -1615,7 +1650,7 @@ TEAM_NAVYENSIGN = DarkRP.createJob("Navy Ensign", {
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 102,
+	sortOrder = 103,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {3},
@@ -1650,7 +1685,7 @@ TEAM_NAVYSUBLIEUTENANT = DarkRP.createJob("Navy Sub-Lieutenant", {
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 103,
+	sortOrder = 104,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {4},
@@ -1685,7 +1720,7 @@ TEAM_NAVYLIEUTENANT = DarkRP.createJob("Navy Lieutenant", {
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 104,
+	sortOrder = 105,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {4},
@@ -1720,7 +1755,7 @@ TEAM_NAVYLIEUTENANTCOMMANDER = DarkRP.createJob("Navy Lieutenant Commander", {
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 105,
+	sortOrder = 106,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {5},
@@ -1755,7 +1790,7 @@ TEAM_NAVYCOMMANDER = DarkRP.createJob("Navy Commander", {
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 106,
+	sortOrder = 107,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {6},
@@ -1784,14 +1819,14 @@ TEAM_NAVYCAPTAIN = DarkRP.createJob("Navy Captain", {
     description = [[You are a member of the Imperial Navy. You control the systems of the ISD Undead and fight enemy vessels that seek to defy the Imperial might.]],
     weapons = {"rw_sw_rk3", "weapon_fists", "none"},
     command = "navycaptain",
-    max = 2,
+    max = 0,
     salary = 300,
     admin = 0,
     vote = false,
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 107,
+	sortOrder = 108,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {6},
@@ -1805,41 +1840,6 @@ TEAM_NAVYCAPTAIN = DarkRP.createJob("Navy Captain", {
         ["Right cyllinder 2"] = {0},
         ["Left cyllinder 1"] = {0},
         ["Left cyllinder 2"] = {0},
-    },
-	PlayerSpawn = function(ply)	ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(100) return CLIENT end,
-	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
-})
-
-TEAM_NAVYLINECAPTAIN = DarkRP.createJob("Navy Line Captain", {
-    color = Color(102, 0, 204, 255),
-    model = {
-	"models/player/male/navy.mdl",
-	"models/player/female/navy.mdl"
-	},
-    description = [[You are a member of the Imperial Navy. You control the systems of the ISD Undead and fight enemy vessels that seek to defy the Imperial might.]],
-    weapons = {"rw_sw_rk3", "weapon_fists", "none"},
-    command = "navylinecaptain",
-    max = 2,
-    salary = 325,
-    admin = 0,
-    vote = false,
-    hasLicense = false,
-    candemote = false,
-	category = "Imperial Navy",
-	sortOrder = 108,
-	skins = {0},
-	bodygroups = {
-        ["Ranks Body"] = {6},
-        ["Ranks Armor"] = {0,6},
-        ["Right cyllinder 1"] = {1},
-        ["Right cyllinder 2"] = {1},
-        ["Left cyllinder 1"] = {1},
-        ["Left cyllinder 2"] = {1},
-        ["Hat"] = {0,1,2},
-        ["Belt"] = {0,1},
-        ["Body"] = {0,1},
-        ["Head"] = {0,1,2,3},
-        ["Code Cylinder"] = {0},
     },
 	PlayerSpawn = function(ply)	ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(100) return CLIENT end,
 	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
@@ -1880,6 +1880,78 @@ TEAM_NAVYCOMMODORE = DarkRP.createJob("Navy Commodore", {
 	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
 })
 
+
+TEAM_NAVYREARADMIRALOWER = DarkRP.createJob("Navy Rear Admiral Lower", {
+    color = Color(102, 0, 204, 255),
+    model = {
+	"models/player/male/navy.mdl",
+	"models/player/female/navy.mdl"
+	},
+    description = [[You are a member of the Imperial Navy. You control the systems of the ISD Undead and fight enemy vessels that seek to defy the Imperial might.]],
+    weapons = {"rw_sw_rk3", "weapon_fists", "none"},
+    command = "navyral",
+    max = 1,
+    salary = 400,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+	category = "Imperial Navy",
+	sortOrder = 110,
+	skins = {0},
+	bodygroups = {
+        ["Ranks Body"] = {8},
+        ["Ranks Armor"] = {0,8},
+        ["Right cyllinder 1"] = {1},
+        ["Right cyllinder 2"] = {1},
+        ["Left cyllinder 1"] = {1},
+        ["Left cyllinder 2"] = {1},
+        ["Hat"] = {0,1,2},
+        ["Belt"] = {0,1},
+        ["Body"] = {0,1},
+        ["Head"] = {0,1,2,3},
+        ["Code Cylinder"] = {0},
+    },
+	PlayerSpawn = function(ply)	ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(100) return CLIENT end,
+	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
+})
+
+
+TEAM_NAVYREARADMIRALIPPER = DarkRP.createJob("Navy Rear Admiral Upper", {
+    color = Color(102, 0, 204, 255),
+    model = {
+	"models/player/male/navy.mdl",
+	"models/player/female/navy.mdl"
+	},
+    description = [[You are a member of the Imperial Navy. You control the systems of the ISD Undead and fight enemy vessels that seek to defy the Imperial might.]],
+    weapons = {"rw_sw_rk3", "weapon_fists", "none"},
+    command = "navyrau",
+    max = 1,
+    salary = 400,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+	category = "Imperial Navy",
+	sortOrder = 111,
+	skins = {0},
+	bodygroups = {
+        ["Ranks Body"] = {8},
+        ["Ranks Armor"] = {0,8},
+        ["Right cyllinder 1"] = {1},
+        ["Right cyllinder 2"] = {1},
+        ["Left cyllinder 1"] = {1},
+        ["Left cyllinder 2"] = {1},
+        ["Hat"] = {0,1,2},
+        ["Belt"] = {0,1},
+        ["Body"] = {0,1},
+        ["Head"] = {0,1,2,3},
+        ["Code Cylinder"] = {0},
+    },
+	PlayerSpawn = function(ply)	ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(100) return CLIENT end,
+	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
+})
+
 TEAM_NAVYVICEADMIRAL = DarkRP.createJob("Navy Vice Admiral", {
     color = Color(102, 0, 204, 255),
     model = {
@@ -1896,7 +1968,7 @@ TEAM_NAVYVICEADMIRAL = DarkRP.createJob("Navy Vice Admiral", {
     hasLicense = false,
     candemote = false,
 	category = "Imperial Navy",
-	sortOrder = 110,
+	sortOrder = 112,
 	skins = {0},
 	bodygroups = {
         ["Ranks Body"] = {8},
@@ -2029,6 +2101,78 @@ TEAM_NAVYADMIRAL = DarkRP.createJob("Navy Admiral", {
 	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
 })
 
+TEAM_NAVYFLEETADMIRAL = DarkRP.createJob("Navy Fleet Admiral", {
+    color = Color(102, 0, 204, 255),
+    model = {
+	"models/player/male/navy.mdl",
+	"models/player/female/navy.mdl",
+	"models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_01/pilot_imperial_orig_01.mdl"
+	},
+    description = [[You are the highest ranking naval member aboard the ISD. You command our naval members to victory in space and destroy any naval opposition to the Empire!]],
+    weapons = {"rw_sw_dt29", "weapon_fists", "none"},
+    command = "navyfltadmiral",
+    max = 1,
+    salary = 600,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+	category = "High Command",
+	sortOrder = 103,
+	skins = {0},
+	bodygroups = {
+        ["Ranks Body"] = {8},
+        ["Ranks Armor"] = {0,8},
+        ["Code Cylinder"] = {0},
+        ["Hat"] = {0,1,2},
+        ["Belt"] = {0,1},
+        ["Body"] = {0,1},
+        ["Head"] = {0,1,2,3},
+        ["Right cyllinder 1"] = {1},
+        ["Right cyllinder 2"] = {0},
+        ["Left cyllinder 1"] = {0},
+        ["Left cyllinder 2"] = {0},
+    },
+	PlayerSpawn = function(ply)	ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(100) return CLIENT end,
+	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
+})
+
+TEAM_NAVYMOFF = DarkRP.createJob("Moff", {
+    color = Color(102, 0, 204, 255),
+    model = {
+	"models/player/male/navy.mdl",
+	"models/player/female/navy.mdl",
+	"models/player/markus/swbf2/characters/hero/imperial_pilots/pilot_imperial_orig_01/pilot_imperial_orig_01.mdl"
+	},
+    description = [[You are the highest ranking naval member aboard the ISD. You command our naval members to victory in space and destroy any naval opposition to the Empire!]],
+    weapons = {"rw_sw_dt29", "weapon_fists", "none"},
+    command = "moff",
+    max = 1,
+    salary = 600,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+	category = "High Command",
+	sortOrder = 104,
+	skins = {0},
+	bodygroups = {
+        ["Ranks Body"] = {8},
+        ["Ranks Armor"] = {0,8},
+        ["Code Cylinder"] = {0},
+        ["Hat"] = {0,1,2},
+        ["Belt"] = {0,1},
+        ["Body"] = {0,1},
+        ["Head"] = {0,1,2,3},
+        ["Right cyllinder 1"] = {1},
+        ["Right cyllinder 2"] = {0},
+        ["Left cyllinder 1"] = {0},
+        ["Left cyllinder 2"] = {0},
+    },
+	PlayerSpawn = function(ply)	ply:SetHealth(100) ply:SetMaxHealth(100) ply:SetArmor(100) return CLIENT end,
+	PlayerDeath = function(ply) ply:SetHealth(0) return CLIENT end,	
+})
+
 TEAM_ISBDIRECTOR = DarkRP.createJob("ISB Director", {
 	color = Color(96, 96, 96, 255),
     model = {
@@ -2045,7 +2189,7 @@ TEAM_ISBDIRECTOR = DarkRP.createJob("ISB Director", {
     hasLicense = false,
     candemote = false,
 	category = "High Command",
-	sortOrder = 103,
+	sortOrder = 105,
 	skins = {0},
 	bodygroups = {
 		["Ranks Body"] = {15},
